@@ -12,6 +12,6 @@ RUN pip install -r r.txt
 RUN pip install protobuf==3.17.0
 COPY . .
 
-EXPOSE 5800
+EXPOSE 8001
 
 ENTRYPOINT [ "python", "-m", "doodle_classification.server" ]
