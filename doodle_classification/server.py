@@ -52,7 +52,7 @@ if __name__ == '__main__':
     if https:
         pathToCert = os.environ['SSL_CERT_PATH']
         pathToKey = os.environ['SSL_KEY_PATH']
-        app.run(host='0.0.0.0', port=1337, ssl_context=(
+        app.run(host='0.0.0.0', port=8001, ssl_context=(
             pathToCert, pathToKey), debug=not PRODUCTION)
     else:
-        app.run(host='0.0.0.0', port=5800, debug=not PRODUCTION)
+        app.run(host='0.0.0.0', port=8001, debug=not PRODUCTION)

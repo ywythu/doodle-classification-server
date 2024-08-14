@@ -29,6 +29,7 @@ def save_image_history(image_raw, prediction: list):
 
 @timeit
 def stringToRGB(base64_string):
+    base64_string = base64_string.replace(' ', '+')
     imgdata = base64.b64decode(str(base64_string))
     image = Image.open(io.BytesIO(imgdata))
     return cv2.cvtColor(np.array(image), cv2.COLOR_BGR2RGB)
