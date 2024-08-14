@@ -11,4 +11,4 @@ services:
       PRODUCTION: "true"
 
     ports:
-      - 5800:5800
+      - "8005:8001"
